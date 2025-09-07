@@ -1,0 +1,26 @@
+@use './globals';
+@use './media';
+@use './mixins';
+@use './normalize';
+
+@use 'blocks/logo';
+@use 'blocks/button';
+@use 'blocks/input';
+@use 'blocks/header';
+@use 'blocks/mobile-overlay';
+@use 'blocks/grid';
+@use 'blocks/start';
+@use 'blocks/blue-button';
+@use 'blocks/center';
+@use 'blocks/sidebar';
+
+@use 'blocks/person';
+@use 'blocks/posts';
+@use 'blocks/instagram';
+@use 'blocks/tags';
+@use 'blocks/email';
+@use 'blocks/end';
+
+@use 'blocks/footer';
+@use 'blocks/in-touch';
+@use 'blocks/newsletter';

@@ -1,0 +1,51 @@
+@use '../mixins';
+@use '../media';
+
+.in-touch {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: 64px;
+
+    &__header {
+        max-width: 270px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        row-gap: 28px;
+    }
+
+    &__description {
+        color: #CECECE;
+    }
+
+    &__body {
+        &-title {
+            color: var(--color-text-light);
+            font-size: 20px;
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+        }
+
+        &-list {
+            gap: 15px;
+        }
+
+        &-link {
+            @include mixins.square(34px);
+            @include mixins.flex-center(true);
+            color: var(--color-text-light);
+            background-color: #373737;
+            border-radius: var(--border-radius-small);
+            transition-duration: 0.5s;
+            @include media.hover {
+                color: var(--background-color-blue);
+                box-shadow: 0 0 10px 2px rgba($color: #000000, $alpha: 0.5);
+            }
+        }
+    }
+}

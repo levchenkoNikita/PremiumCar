@@ -1,0 +1,21 @@
+@use '../mixins';
+@use '../media';
+
+.button {
+    @include mixins.reset-button;
+    color: var(--color-text-light);
+    font-size: 14px;
+    line-height: 1.28;
+    width: var(--button-width);
+    height: var(--button-height);
+    padding-inline: 82px;
+    padding-block: 16px;
+    border-radius: var(--border-radius-big);
+    transition-duration: 0.5s;
+    background-color: var(--background-color-dark-alternative);
+
+    @include media.hover {
+        color: var(--background-color-blue);
+        box-shadow: 0 0 10px 2px rgba($color: #000000, $alpha: 0.5);
+    }
+}

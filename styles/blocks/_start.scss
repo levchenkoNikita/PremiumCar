@@ -1,0 +1,63 @@
+@use '../mixins';
+@use '../media';
+
+.start {
+    color: var(--color-text-light);
+    padding-block: 30px 80px;
+
+    &-card {
+        max-width: 370px;
+        height: 265px;
+        padding: 30px 23px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        row-gap: 20px;
+        border-radius: var(--border-radius-big);
+
+        &__body {
+            display: flex;
+            flex-direction: column;
+            row-gap: 6px;
+        }
+
+        &__title {
+            transition-duration: 0.2s;
+            @include mixins.fluid-text(20, 16);
+            @include media.hover {
+                color: var(--background-color-blue);
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__item:nth-child(1) {
+        grid-row: span 2;
+    }
+
+    &__item:nth-child(1) &-card{
+        height: 560px;
+        background: url('/images/start/1.png') center/cover no-repeat;
+
+        &__title {
+            @include mixins.fluid-text();
+        }
+    }
+
+    &__item:nth-child(2) &-card{
+        background: url('/images/start/2.png') center/cover no-repeat;
+    }
+
+    &__item:nth-child(3) &-card{
+        background: url('/images/start/3.png') center/cover no-repeat;
+    }
+
+    &__item:nth-child(4) &-card{
+        background: url('/images/start/4.png') center/cover no-repeat;
+    }
+
+    &__item:nth-child(5) &-card{
+        background: url('/images/start/5.png') center/cover no-repeat;
+    }
+}

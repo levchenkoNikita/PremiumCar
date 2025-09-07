@@ -1,0 +1,47 @@
+@use '../mixins';
+@use '../media';
+
+.instagram {
+    &-title {
+        color: var(--color-text-dark);
+        font-size: 18px;
+        line-height: 1.17;
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__list {
+        gap: 10px;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        @include media.desktop {
+            gap: 5px;
+        }
+        @include media.mobile {
+            gap: 10px;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__link {
+        padding-inline: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 10px;
+
+        & span {
+            @include mixins.flex-center(true);
+        }
+
+        @include media.desktop {
+            width: 100%;
+        }
+    }
+}

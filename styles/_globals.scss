@@ -1,0 +1,132 @@
+@use './media';
+@use './mixins';
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../fonts/PTSans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../fonts/PTSans-BoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../fonts/PTSans-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../fonts/PTSans-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+:root {
+    --font-base: 'PT Sans', sans-serif;
+    --font-base-italic: 'PT Sans', sans-serif;
+    --font-bold: 'PT Sans', sans-serif;
+    --font-bold-italic: 'PT Sans', sans-serif;
+
+    --color-text-light: #fff;
+    --color-text-dark: #171717;
+    --color-text-gray: #666666;
+
+    --background-color-light: #fff;
+    --background-color-dark: #000;
+    --background-color-dark-alternative: #232323;
+    --background-color-blue: #4A90E2;
+
+    --container-width: 1170px;
+    --container-padding-x: 5px;
+
+    --button-width: 270px;
+    --button-height: 50px;
+
+    --logo-button-width: 100px;
+    --logo-button-height: 23px;
+
+    --vehicle-button-width: 62px;
+    --vehicle-button-height: 22px;
+    
+    --border-radius-big: 5px;
+    --border-radius-small: 3px;
+
+    --box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+    
+    --transition-duration: 0.2s;
+}
+
+body {
+    font-family: var(--font-base);
+    font-size: 14px;
+    line-height: 1.28;
+    color: var(--color-text-gray);
+    background-color: var(--background-color-light);
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+a {
+    @include mixins.reset-link;
+    color: var(--color-text-light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-bold);
+}
+
+h1, .h1 {
+    @include mixins.fluid-text(60, 43);
+}
+
+h2, .h2 {
+    @include mixins.fluid-text(40, 36);
+}
+
+h3, .h3 {
+    @include mixins.fluid-text(26, 18);
+}
+
+h4, .h4 {
+    @include mixins.fluid-text(20, 16);
+}
+
+.container {
+    max-width: calc(var(--container-width) - var(--container-padding-x) * 2);
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+    @include mixins.visually-hidden;
+}
+
+.hidden-mobile {
+    @include media.mobile{
+        display: none !important;
+    }
+}
+
+.visible-mobile {
+    @include media.mobile-above{
+        display: none !important;
+    }
+}

@@ -1,0 +1,25 @@
+@use '../mixins';
+@use '../media';
+
+.newsletter {
+    color: var(--color-text-light);
+    width: 270px;
+    height: 234px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    
+    &__title {
+        font-size: 20px;
+        &:not(:last-child) {
+            margin-bottom: 38px;
+        }
+    }
+
+    &__button {
+        padding-inline: 64px;
+        padding-block: 16px;
+        background-color: #232323;
+    }
+}

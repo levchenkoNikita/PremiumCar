@@ -1,0 +1,47 @@
+@use '../mixins';
+@use '../media';
+
+.posts {
+    &-title {
+        color: var(--color-text-dark);
+        font-size: 18px;
+        &:not(:last-child) {
+            margin-bottom: 22px;
+        }
+    }
+
+    &__list {
+        row-gap: 40px;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        row-gap: 20px;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__button {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    &__title {
+        color: var(--color-text-dark);
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__author {
+        font-style: italic;
+    }
+}

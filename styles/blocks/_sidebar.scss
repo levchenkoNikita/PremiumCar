@@ -1,0 +1,23 @@
+@use '../mixins';
+@use '../media';
+
+.sidebar {
+    max-width: 270px;
+
+    @include media.desktop {
+        max-width: 770px;
+    }
+
+    @include media.mobile {
+        max-width: 270px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        row-gap: 60px;
+    }
+
+}

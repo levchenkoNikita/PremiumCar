@@ -1,0 +1,57 @@
+@use '../mixins';
+@use '../media';
+
+.grid {
+    --templateColumns: 3;
+
+    display: grid;
+    grid-template-columns: repeat(var(--templateColumns), 1fr);
+    place-items: center;
+    gap: 30px;
+
+    @for $i from 1 to 12 {
+        &--#{$i} {
+            --templateColumns: #{$i};
+        }
+    }
+
+    &--4 {
+        @include media.tablet {
+            --templateColumns: 2;
+        }
+
+        @include media.mobile-s {
+            --templateColumns: 1;
+        }
+    }
+
+    &--3 {
+        @include media.tablet {
+            --templateColumns: 2;
+        }
+
+        @include media.mobile {
+            --templateColumns: 1;
+        }
+    }
+
+    &--2 {
+        @include media.desktop {
+            --templateColumns: 6;
+        }
+
+        @include media.mobile {
+            --templateColumns: 2;
+        }
+    }
+
+    &--1 {
+        @include media.desktop {
+            --templateColumns: 3;
+        }
+
+        @include media.mobile {
+            --templateColumns: 1;
+        }
+    }
+}

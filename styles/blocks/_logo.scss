@@ -1,0 +1,30 @@
+@use '../mixins';
+@use '../media';
+
+
+.logo {
+    color: var(--color-text-light);
+
+    @include mixins.reset-button;
+    width: var(--logo-button-width);
+    height: var(--logo-button-height);
+
+    @include mixins.flex-center;
+    justify-content: space-between;
+    column-gap: 7px;
+
+    &::after {
+        content: attr(data-logo);
+        display: inline-flex;
+        @include mixins.flex-center(true);
+        width: 39px;
+        height: 23px;
+        padding: 3px 5px;
+        border-radius: var(--border-radius-small);
+        background-color: var(--background-color-blue);
+    }   
+
+    @include media.hover {
+        opacity: 0.7;
+    }
+}

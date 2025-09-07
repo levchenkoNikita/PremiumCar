@@ -1,0 +1,51 @@
+@use '../mixins';
+@use '../media';
+
+.email {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    row-gap: 30px;
+
+    @include media.desktop {
+        align-items: center;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+
+        @include media.desktop {
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        color: var(--color-text-dark);
+        font-size: 18px;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        row-gap: 10px;
+    }
+
+    & .input {
+        border: 1px solid #E5E5E5;
+        background-color: var(--background-color-light);
+    }
+
+    &__button {
+        padding-inline: 64px;
+    }
+}

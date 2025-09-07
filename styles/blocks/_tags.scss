@@ -1,0 +1,32 @@
+@use '../mixins';
+@use '../media';
+
+.tags {
+    &-title {
+        color: var(--color-text-dark);
+        font-size: 18px;
+        line-height: 1.17;
+        &:not(:last-child) {
+            margin-bottom: 26px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    &__link {
+        color: var(--color-text-dark);
+        padding-inline: 16px;
+        padding-block: 6px;
+        background-color: #EBEBEB;
+        border-radius: var(--border-radius-small);
+
+        @include media.hover {
+            color: var(--background-color-blue);
+            box-shadow: 0 0 10px 0 rgba($color: #000000, $alpha: 0.3);
+        }
+    }
+}

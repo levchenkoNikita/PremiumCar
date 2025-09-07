@@ -1,0 +1,59 @@
+@use '../mixins';
+@use '../media';
+
+.header {
+    background-color: var(--background-color-dark);
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 30px;
+        padding-block: 36px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 40px;
+    }
+
+    &__link {
+        transition-duration: 0.5s;
+        @include media.hover {
+            color: var(--background-color-blue);
+        }
+    }
+
+    &__search-button {
+        @include mixins.reset-button;
+        @include mixins.square(16px);
+        background: url('/MyProject/PremiumCar/images/icons/search-button.svg') center/contain no-repeat;
+
+        @include media.hover {
+            color: var(--background-color-blue);
+        }
+    }
+
+    &__burger-button {
+        @include mixins.reset-button;
+        @include mixins.square(36px);
+        position: relative;
+
+        &::before {
+            content: '';
+            @include mixins.abs-center;
+            width: 26px;
+            height: 2px;
+            border-radius: var(--border-radius-small);
+            background-color: var(--background-color-light);
+            box-shadow: 0 8px var(--background-color-light), 0 -8px var(--background-color-light);
+        }
+
+        @include media.hover {
+            opacity: 0.7;
+        }
+    }
+
+}
