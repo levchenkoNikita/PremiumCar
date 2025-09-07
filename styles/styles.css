@@ -452,7 +452,7 @@ svg * {
   background-color: transparent;
   width: 16px;
   aspect-ratio: 1;
-  background: url("/MyProject/PremiumCar/images/icons/search-button.svg") center/contain no-repeat;
+  background: url("../images/icons/search-button.svg") center/contain no-repeat;
 }
 @media (hover: hover) {
   .header__search-button:hover {
@@ -705,22 +705,22 @@ svg * {
 }
 .start__item:nth-child(1) .start-card {
   height: 560px;
-  background: url("./images/start/1.png") center/cover no-repeat;
+  background: url("../images/start/1.png") center/cover no-repeat;
 }
 .start__item:nth-child(1) .start-card__title {
   font-size: clamp(20px, 2.2222222222vw, 26px);
 }
 .start__item:nth-child(2) .start-card {
-  background: url("./images/start/2.png") center/cover no-repeat;
+  background: url("../images/start/2.png") center/cover no-repeat;
 }
 .start__item:nth-child(3) .start-card {
-  background: url("./images/start/3.png") center/cover no-repeat;
+  background: url("../images/start/3.png") center/cover no-repeat;
 }
 .start__item:nth-child(4) .start-card {
-  background: url("./images/start/4.png") center/cover no-repeat;
+  background: url("../images/start/4.png") center/cover no-repeat;
 }
 .start__item:nth-child(5) .start-card {
-  background: url("./images/start/5.png") center/cover no-repeat;
+  background: url("../images/start/5.png") center/cover no-repeat;
 }
 
 .blue-button {

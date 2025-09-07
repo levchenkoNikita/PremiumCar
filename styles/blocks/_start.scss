@@ -38,7 +38,7 @@
 
     &__item:nth-child(1) &-card{
         height: 560px;
-        background: url('./images/start/1.png') center/cover no-repeat;
+        background: url('../images/start/1.png') center/cover no-repeat;
 
         &__title {
             @include mixins.fluid-text();
@@ -46,18 +46,18 @@
     }
 
     &__item:nth-child(2) &-card{
-        background: url('./images/start/2.png') center/cover no-repeat;
+        background: url('../images/start/2.png') center/cover no-repeat;
     }
 
     &__item:nth-child(3) &-card{
-        background: url('./images/start/3.png') center/cover no-repeat;
+        background: url('../images/start/3.png') center/cover no-repeat;
     }
 
     &__item:nth-child(4) &-card{
-        background: url('./images/start/4.png') center/cover no-repeat;
+        background: url('../images/start/4.png') center/cover no-repeat;
     }
 
     &__item:nth-child(5) &-card{
-        background: url('./images/start/5.png') center/cover no-repeat;
+        background: url('../images/start/5.png') center/cover no-repeat;
     }
 }
